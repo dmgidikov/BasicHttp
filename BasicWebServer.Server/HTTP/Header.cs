@@ -4,9 +4,6 @@
 
     public class Header
     {
-        private readonly string _name;
-        private readonly string _value;
-
         public const string ContentType = "Content-Type";
         public const string ContentLenght = "Content-Length";
         public const string ContentDisposition = "Content-Disposition";
@@ -21,8 +18,8 @@
             Guard.AgainstNull(name, nameof(name));
             Guard.AgainstNull(value, nameof(value));
 
-            _name = name;
-            _value = value;
+            Name = name;
+            Value = value;
         }
 
         public string Name { get; init; }
@@ -30,6 +27,6 @@
         public string Value { get; set; }
 
         public override string ToString()
-            => $"{_name}: {_value}";
+            => $"{Name}: {Value}";
     }
 }
