@@ -6,7 +6,7 @@
         {
             if (value == null)
             {
-                name ??= "Value";
+                name ??= "null";
 
                 throw new ArgumentException($"{name} cannot be null.");
             }
